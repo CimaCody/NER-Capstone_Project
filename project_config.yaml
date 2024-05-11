@@ -1,0 +1,56 @@
+project:
+  data:
+    AI:
+      dev_data_path: /content/drive/MyDrive/Capstone Project Data/English NER data
+        (Domains)/ai/dev.txt
+      test_data_path: /content/drive/MyDrive/Capstone Project Data/English NER data
+        (Domains)/ai/test.txt
+      train_data_path: /content/drive/MyDrive/Capstone Project Data/English NER data
+        (Domains)/ai/train.txt
+    Literature:
+      train_data_path: /content/drive/MyDrive/Capstone Project Data/English NER data
+        (Domains)/literature/train.txt
+    Music:
+      train_data_path: /content/drive/MyDrive/Capstone Project Data/English NER data
+        (Domains)/music/train.txt
+    Politics:
+      train_data_path: /content/drive/MyDrive/Capstone Project Data/English NER data
+        (Domains)/politics/train.txt
+    Science:
+      train_data_path: /content/drive/MyDrive/Capstone Project Data/English NER data
+        (Domains)/science/train.txt
+  description: Evaluation and improvement of Named Entity Recognition models across
+    various specialized domains using CrossNER.
+  domains:
+  - AI
+  - Music
+  - Literature
+  - Science
+  - Politics
+  evaluation:
+    metrics:
+    - F1 Score
+    - Accuracy
+    results:
+      AI:
+        Accuracy: 0.7737664536987144
+        F1: 0.6
+      Literature:
+        Accuracy: 0.8375317199975243
+        F1: 0.53
+      Music:
+        Accuracy: 0.8287171639887784
+        F1: 0.66
+      Politics:
+        Accuracy: 0.9261112319628744
+        F1: 0.8
+      Science:
+        Accuracy: 0.8906963616770155
+        F1: 0.71
+  model:
+    pre_trained_model: bert-base-uncased
+    saved_paths:
+      model_checkpoint: /content/drive/MyDrive/Capstone Project Data/Direct Fine-Tuning
+      tokenizer: /content/drive/MyDrive/Capstone Project Data/Direct Fine-Tuning
+    type: BERT-based
+  name: CrossNER Evaluation
